@@ -41,10 +41,6 @@ const mappedData = pokesData.map((pokeData) =>({
 
 
 const drawPokes = (pokemons) =>{
-    //let gallery$$ = document.querySelector('galery___father');
-    //gallery$$.innerHTML = "";
-    
-
     for (const poke of pokemons) {
         let section$$ = document.querySelector('#father')
         let article$$ = document.createElement('article')
@@ -92,17 +88,6 @@ const searchPokes = (name, pokes) => {
     const filteredPokes = pokes.filter((poke) => poke.title.toLowerCase().includes(name.toLowerCase()))
     drawPokes(filteredPokes);
 }
-//SEARCHER
-/*    
-let text$$ = document.querySelector('input').value;
-    for (i = 0; i < allPokemons.length; i++) {
-     let searchCard = article$$[i].getElementsByClassName('title__desc')
-     if (!searchCard[0].getElementsByClassName('title__desc'))article$$[1].style.display = "none";{
-    
-     }
-    }*/
-
-//Listener
 const selectInput = document.querySelector('input')
 
 const selectButton = document.querySelector('#searcher__form')
@@ -150,7 +135,6 @@ selectButton.addEventListener('submit',(event) =>{
         
         pokeName$$.textContent = poke.name;
         img$$.setAttribute("src", poke.sprites.other?.["official-artwork"].front_default);
-        //type$$.textContent = poke.types[0].type.name;
     
     
         for (let i = 0; i < poke.types.length; i++) {
